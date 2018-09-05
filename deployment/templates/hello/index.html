@@ -1,47 +1,127 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="row">
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top"
-                     src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_165a0c0c142%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_165a0c0c142%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22106.3984375%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                     alt="Card image cap">
+        <div class="col offset-4">
+            <div class="card" style="width: 25rem">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top"
-                     src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_165a0c0c142%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_165a0c0c142%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22106.3984375%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top"
-                     src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_165a0c0c142%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_165a0c0c142%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22106.3984375%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                     alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">Celery Demo</h5>
+                    <p class="card-text">To start and stop celery task click start and stop</p>
+                    <ul>
+                        <li>
+                            Project 1: <p id="project_1"></p>
+                            <button class="btn btn-sm btn-outline-success float-right" onclick="onStartClicked(1)">
+                                Start
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="onStopClicked(1)">Stop</button>
+                        </li>
+                        <hr>
+                        <li>
+                            Project 2: <p id="project_2"></p>
+                            <button class="btn btn-sm btn-outline-success float-right" onclick="onStartClicked(2)">
+                                Start
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="onStopClicked(2)">Stop</button>
+                        </li>
+                        <hr>
+                        <li>
+                            Project 4: <p id="project_4"></p>
+                            <button class="btn btn-sm btn-outline-success float-right" onclick="onStartClicked(4)">
+                                Start
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="onStopClicked(4)">Stop</button>
+                        </li>
+                        <hr>
+                        <li>
+                            Project 9: <p id="project_9"></p>
+                            <button class="btn btn-sm btn-outline-success float-right" onclick="onStartClicked(9)">
+                                Start
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="onStopClicked(9)">Stop</button>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 {% endblock content %}
+
+{% block script %}
+    <script>
+
+        init();
+
+        function init() {
+            let projects = [
+                {projectId: 1, projectName: "project_1"},
+                {projectId: 2, projectName: "project_2"},
+                {projectId: 4, projectName: "project_4"},
+                {projectId: 9, projectName: "project_9"},
+            ];
+
+            getAllStatus(projects)
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function getAllStatus(projects) {
+            projects.forEach(prj => {
+
+                fetch('/get-job-id/' + prj.projectId)
+                    .then(resp => resp.json())
+                    .then(data => {
+                        if (data.jobId) {
+                            getJobStatus(prj.projectId, data.jobId)
+                        }
+                    })
+                    .catch(err => console.log(err.toString()))
+
+            });
+        }
+
+        function getJobStatus(projectId, jobId) {
+            sleep(1000).then(() => {
+                fetch('/status/' + jobId)
+                    .then(resp => resp.json())
+                    .then(data => {
+                        let projectHtml = $('#project_' + projectId);
+
+                        projectHtml.html(`
+                                State: ${data.state}, Result: ${data.result ? data.result.operation : data.result}
+                        `);
+
+                        if (data.state === "PROGRESS") {
+                            getJobStatus(projectId, jobId)
+                        }
+                    })
+                    .catch(err => console.log(err.toString()))
+            });
+
+
+        }
+
+        function onStartClicked(projectId) {
+            fetch('/start/' + projectId)
+                .then(resp => resp.json())
+                .then(data => {
+                    if (data.jobId) {
+                        getJobStatus(projectId, data.jobId)
+                    }
+                })
+                .catch(err => console.log(err.toString()))
+        }
+
+        function onStopClicked(projectId) {
+            fetch('/stop/' + projectId)
+                .then(resp => resp.json())
+                .then(data => {
+                    let projectHtml = $('#project_' + projectId);
+                    if (data.jobId) {
+                        projectHtml.html(data.data);
+                    }
+                })
+                .catch(err => console.log(err.toString()))
+        }
+    </script>
+{% endblock script %}

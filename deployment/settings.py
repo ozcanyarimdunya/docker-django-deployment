@@ -123,3 +123,8 @@ STATICFILES_DIRS = [
 
 if os.environ.get('IS_PRODUCTION', None):
     DEBUG = False
+
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = TIME_ZONE

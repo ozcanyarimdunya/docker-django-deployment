@@ -61,4 +61,3 @@ venv.bak/
 /site
 .mypy_cache/
 .idea/
-deployment/media/
